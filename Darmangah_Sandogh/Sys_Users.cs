@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using Telerik.WinControls.UI;
+using Telerik.WinControls;
 
 namespace Darmangah_Sandogh
 {
@@ -60,7 +61,6 @@ namespace Darmangah_Sandogh
             comboBox1.DataSource = ds.Tables[0];
             comboBox1.DisplayMember = "uname";
             comboBox1.ValueMember = "uid";
-            db.exec();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,6 +71,7 @@ namespace Darmangah_Sandogh
 
                 db.SetCommand("Select * From Sys_Users WHERE uid = '" + uid + "'");
                 ds = db.GetData();
+
                 uname_box.Text = Convert.ToString(ds.Tables[0].Rows[0]["uname"]);
                 checkedListBox1.SetItemChecked(0, Convert.ToBoolean(ds.Tables[0].Rows[0]["paziresh"]));
                 checkedListBox1.SetItemChecked(1, Convert.ToBoolean(ds.Tables[0].Rows[0]["virayesh"]));
@@ -78,7 +79,9 @@ namespace Darmangah_Sandogh
                 checkedListBox1.SetItemChecked(3, Convert.ToBoolean(ds.Tables[0].Rows[0]["gozareshat"]));
                 checkedListBox1.SetItemChecked(4, Convert.ToBoolean(ds.Tables[0].Rows[0]["maghadir_paye"]));
                 checkedListBox1.SetItemChecked(5, Convert.ToBoolean(ds.Tables[0].Rows[0]["modiriat"]));
-                checkedListBox1.SetItemChecked(6, Convert.ToBoolean(ds.Tables[0].Rows[0]["active"]));
+                checkedListBox1.SetItemChecked(6, Convert.ToBoolean(ds.Tables[0].Rows[0]["EditAccess"]));
+                checkedListBox1.SetItemChecked(7, Convert.ToBoolean(ds.Tables[0].Rows[0]["DelAccess"]));
+                checkedListBox1.SetItemChecked(8, Convert.ToBoolean(ds.Tables[0].Rows[0]["active"]));
                 db.exec();
             }
             catch
@@ -91,11 +94,10 @@ namespace Darmangah_Sandogh
         {
             db.SetCommand("SELECT * FROM Sys_Users WHERE uname='" + uname_box.Text + "'");
             ds = db.GetData();
-            db.exec();
 
             if (ds.Tables[0].Rows.Count == 0)
             {
-                db.SetCommand("INSERT INTO Sys_Users(uname,pwd,paziresh,virayesh,savabegh,gozareshat,maghadir_paye,modiriat,active) VALUES (@uname,@pwd,@paziresh,@virayesh,@savabegh,@gozareshat,@maghadir_paye,@modiriat,@active)");
+                db.SetCommand("INSERT INTO Sys_Users(uname,pwd,paziresh,virayesh,savabegh,gozareshat,maghadir_paye,modiriat,active,EditAccess,DelAccess) VALUES (@uname,@pwd,@paziresh,@virayesh,@savabegh,@gozareshat,@maghadir_paye,@modiriat,@active,@EditAccess,@DelAccess)");
                 db.SetParameter("@uname", uname_box.Text);
                 db.SetParameter("@pwd", CryptorEngine.Encrypt(pwd_box.Text, true));
                 db.SetParameter("@paziresh", checkedListBox1.GetItemChecked(0));
@@ -104,9 +106,11 @@ namespace Darmangah_Sandogh
                 db.SetParameter("@gozareshat", checkedListBox1.GetItemChecked(3));
                 db.SetParameter("@maghadir_paye", checkedListBox1.GetItemChecked(4));
                 db.SetParameter("@modiriat", checkedListBox1.GetItemChecked(5));
-                db.SetParameter("@active", checkedListBox1.GetItemChecked(6));
+                db.SetParameter("@EditAccess", checkedListBox1.GetItemChecked(6));
+                db.SetParameter("@DelAccess", checkedListBox1.GetItemChecked(7));
+                db.SetParameter("@active", checkedListBox1.GetItemChecked(8));
                 db.exec();
-                MessageBox.Show("کاربر جدید اضافه شد");
+                RadMessageBox.Show("کاربر جدید اضافه شد");
             }
             else
             {
@@ -120,7 +124,7 @@ namespace Darmangah_Sandogh
         {
             if (uname_box.Text == "" || uname_box.Text == " " || uname_box.Text == string.Empty || uname_box.Text == null)
             {
-                MessageBox.Show("لطفا یکی از کاربران را انتخاب کنید");
+                RadMessageBox.Show("لطفا یکی از کاربران را انتخاب کنید");
             }
             else
             {
@@ -128,7 +132,7 @@ namespace Darmangah_Sandogh
 
                 if (radCheckBox13.Checked)
                 {
-                    db.SetCommand("update Sys_Users SET uname = @uname, pwd = @pwd, paziresh = @paziresh, virayesh = @virayesh, savabegh = @savabegh, gozareshat = @gozareshat, maghadir_paye = @maghadir_paye, modiriat = @modiriat, active = @active WHERE uid = @uid");
+                    db.SetCommand("update Sys_Users SET uname = @uname, pwd = @pwd, paziresh = @paziresh, virayesh = @virayesh, savabegh = @savabegh, gozareshat = @gozareshat, maghadir_paye = @maghadir_paye, modiriat = @modiriat, active = @active, EditAccess = @EditAccess, DelAccess = @DelAccess WHERE uid = @uid");
                     db.SetParameter("@uid", uid);
                     db.SetParameter("@uname", uname_box.Text);
                     db.SetParameter("@pwd", CryptorEngine.Encrypt(pwd_box.Text, true));
@@ -138,15 +142,17 @@ namespace Darmangah_Sandogh
                     db.SetParameter("@gozareshat", checkedListBox1.GetItemChecked(3));
                     db.SetParameter("@maghadir_paye", checkedListBox1.GetItemChecked(4));
                     db.SetParameter("@modiriat", checkedListBox1.GetItemChecked(5));
-                    db.SetParameter("@active", checkedListBox1.GetItemChecked(6));
-
+                    db.SetParameter("@EditAccess", checkedListBox1.GetItemChecked(6));
+                    db.SetParameter("@DelAccess", checkedListBox1.GetItemChecked(7));
+                    db.SetParameter("@active", checkedListBox1.GetItemChecked(8));
                     db.exec();
-                    MessageBox.Show("ویرایش انجام شد");
+
+                    RadMessageBox.Show("ویرایش انجام شد");
                     Userz();
                 }
                 else
                 {
-                    db.SetCommand("update Sys_Users SET uname = @uname, paziresh = @paziresh, virayesh = @virayesh, savabegh = @savabegh, gozareshat = @gozareshat, maghadir_paye = @maghadir_paye, modiriat = @modiriat, active = @active WHERE uid = @uid");
+                    db.SetCommand("update Sys_Users SET uname = @uname, paziresh = @paziresh, virayesh = @virayesh, savabegh = @savabegh, gozareshat = @gozareshat, maghadir_paye = @maghadir_paye, modiriat = @modiriat, active = @active, EditAccess = @EditAccess, DelAccess = @DelAccess WHERE uid = @uid");
                     db.SetParameter("@uid", uid);
                     db.SetParameter("@uname", uname_box.Text);
                     db.SetParameter("@paziresh", checkedListBox1.GetItemChecked(0));
@@ -155,9 +161,11 @@ namespace Darmangah_Sandogh
                     db.SetParameter("@gozareshat", checkedListBox1.GetItemChecked(3));
                     db.SetParameter("@maghadir_paye", checkedListBox1.GetItemChecked(4));
                     db.SetParameter("@modiriat", checkedListBox1.GetItemChecked(5));
-                    db.SetParameter("@active", checkedListBox1.GetItemChecked(6));
+                    db.SetParameter("@EditAccess", checkedListBox1.GetItemChecked(6));
+                    db.SetParameter("@DelAccess", checkedListBox1.GetItemChecked(7));
+                    db.SetParameter("@active", checkedListBox1.GetItemChecked(8));
                     db.exec();
-                    MessageBox.Show("ویرایش انجام شد");
+                    RadMessageBox.Show("ویرایش انجام شد");
                     Userz();
                 }
                 Userz();

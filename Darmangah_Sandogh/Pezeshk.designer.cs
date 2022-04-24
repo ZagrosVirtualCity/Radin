@@ -30,11 +30,8 @@
         {
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
-            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDrPercent = new TextBoxtest.TxtProNet();
-            this.label1 = new System.Windows.Forms.Label();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.radButton1 = new Telerik.WinControls.UI.RadButton();
             this.txtDrName = new TextBoxtest.TxtProNet();
@@ -52,8 +49,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtDrPercent);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.radButton2);
             this.groupBox1.Controls.Add(this.radButton1);
             this.groupBox1.Controls.Add(this.txtDrName);
@@ -66,41 +61,6 @@
             this.groupBox1.TabIndex = 95;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "مشخصات پزشکان";
-            // 
-            // txtDrPercent
-            // 
-            this.txtDrPercent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDrPercent.AutoSprator = false;
-            this.txtDrPercent.EnterToTab = true;
-            this.txtDrPercent.EscToClose = true;
-            this.txtDrPercent.FocusBackColor = System.Drawing.Color.White;
-            this.txtDrPercent.FocusFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.txtDrPercent.FocusForeColor = System.Drawing.Color.Black;
-            this.txtDrPercent.FocusTextSelect = true;
-            this.txtDrPercent.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDrPercent.Location = new System.Drawing.Point(385, 57);
-            this.txtDrPercent.Name = "txtDrPercent";
-            this.txtDrPercent.Size = new System.Drawing.Size(182, 24);
-            this.txtDrPercent.TabIndex = 108;
-            this.txtDrPercent.TypeAllChar = true;
-            this.txtDrPercent.TypeDateShamsi = false;
-            this.txtDrPercent.TypeEnglishOnly = false;
-            this.txtDrPercent.TypeFarsiOnly = false;
-            this.txtDrPercent.TypeNumricOnly = false;
-            this.txtDrPercent.TypeOtherChar = "";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(573, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
-            this.label1.TabIndex = 109;
-            this.label1.Text = "درصد پرداختی :";
             // 
             // radButton2
             // 
@@ -155,7 +115,7 @@
             this.label3.ForeColor = System.Drawing.Color.Navy;
             this.label3.Location = new System.Drawing.Point(593, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.Size = new System.Drawing.Size(70, 16);
             this.label3.TabIndex = 82;
             this.label3.Text = "نام پزشک : ";
             // 
@@ -185,15 +145,9 @@
             gridViewTextBoxColumn2.HeaderText = "نام پزشک";
             gridViewTextBoxColumn2.Name = "doctorName";
             gridViewTextBoxColumn2.Width = 61;
-            gridViewTextBoxColumn3.EnableExpressionEditor = false;
-            gridViewTextBoxColumn3.FieldName = "drPercent";
-            gridViewTextBoxColumn3.HeaderText = "درصد پرداختی";
-            gridViewTextBoxColumn3.Name = "drPercent";
-            gridViewTextBoxColumn3.Width = 86;
             this.dataGridView1.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
             gridViewTextBoxColumn1,
-            gridViewTextBoxColumn2,
-            gridViewTextBoxColumn3});
+            gridViewTextBoxColumn2});
             this.dataGridView1.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -242,8 +196,6 @@
         private Telerik.WinControls.UI.RadButton radButton1;
         private Telerik.WinControls.UI.RadButton radButton2;
         private Telerik.WinControls.UI.RadGridView dataGridView1;
-        private TextBoxtest.TxtProNet txtDrPercent;
-        private System.Windows.Forms.Label label1;
         private Telerik.WinControls.Themes.MaterialTheme materialTheme1;
     }
 }

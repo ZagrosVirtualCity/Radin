@@ -207,9 +207,8 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                         nurseCost = (nurseP * tarif) / 100;
                         centerCost = ((100 - nurseP) * tarif) / 100;
 
-                        db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                        db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                         db.SetParameter(@"khUsageID", khUID);
-                        db.SetParameter(@"drCost", 0);
                         db.SetParameter(@"nurseCost", nurseCost);
                         db.SetParameter(@"centerCost", centerCost);
                         db.SetParameter(@"gender", gender.Value);
@@ -254,9 +253,8 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                         nurseCost = (nurseP * tarif) / 100;
                         centerCost = ((100 - nurseP) * tarif) / 100;
 
-                        db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                        db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                         db.SetParameter(@"khUsageID", khUID);
-                        db.SetParameter(@"drCost", 0);
                         db.SetParameter(@"nurseCost", nurseCost);
                         db.SetParameter(@"centerCost", centerCost);
                         db.SetParameter(@"gender", gender.Value);
@@ -302,9 +300,8 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                         nurseCost = (nurseP * tarif) / 100;
                         centerCost = ((100 - nurseP) * tarif) / 100;
 
-                        db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                        db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                         db.SetParameter(@"khUsageID", khUID);
-                        db.SetParameter(@"drCost", 0);
                         db.SetParameter(@"nurseCost", nurseCost);
                         db.SetParameter(@"centerCost", centerCost);
                         db.SetParameter(@"gender", gender.Value);
@@ -350,9 +347,8 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                         nurseCost = (nurseP * tarif) / 100;
                         centerCost = ((100 - nurseP) * tarif) / 100;
 
-                        db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                        db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                         db.SetParameter(@"khUsageID", khUID);
-                        db.SetParameter(@"drCost", 0);
                         db.SetParameter(@"nurseCost", nurseCost);
                         db.SetParameter(@"centerCost", centerCost);
                         db.SetParameter(@"gender", gender.Value);
@@ -398,9 +394,8 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                         nurseCost = (nurseP * tarif) / 100;
                         centerCost = ((100 - nurseP) * tarif) / 100;
 
-                        db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                        db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                         db.SetParameter(@"khUsageID", khUID);
-                        db.SetParameter(@"drCost", 0);
                         db.SetParameter(@"nurseCost", nurseCost);
                         db.SetParameter(@"centerCost", centerCost);
                         db.SetParameter(@"gender", gender.Value);
@@ -446,9 +441,8 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                         nurseCost = (nurseP * tarif) / 100;
                         centerCost = ((100 - nurseP) * tarif) / 100;
 
-                        db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                        db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                         db.SetParameter(@"khUsageID", khUID);
-                        db.SetParameter(@"drCost", 0);
                         db.SetParameter(@"nurseCost", nurseCost);
                         db.SetParameter(@"centerCost", centerCost);
                         db.SetParameter(@"gender", gender.Value);
@@ -493,9 +487,8 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                         nurseCost = (nurseP * tarif) / 100;
                         centerCost = ((100 - nurseP) * tarif) / 100;
 
-                        db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                        db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                         db.SetParameter(@"khUsageID", khUID);
-                        db.SetParameter(@"drCost", 0);
                         db.SetParameter(@"nurseCost", nurseCost);
                         db.SetParameter(@"centerCost", centerCost);
                         db.SetParameter(@"gender", gender.Value);

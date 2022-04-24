@@ -8,7 +8,7 @@ using Telerik.WinControls.UI;
 
 namespace Darmangah_Sandogh
 {
-    public partial class visNiroo : RadForm
+    public partial class visMihan : RadForm
     {
         MyDB db = new MyDB();
         DataSet ds = new DataSet();
@@ -18,23 +18,13 @@ namespace Darmangah_Sandogh
         string path = "Reports\\Recipt.mrt";
         DataSet dset = new DataSet();
         private object SaID;
-        public visNiroo()
+        public visMihan()
         {
             InitializeComponent();
         }
 
-        private void Paziresh_Load(object sender, EventArgs e)
-        {
-            regbox.Text = PersianDateTime.Now.ToString("yyyy/MM/dd");
-            DataTable _PaymentType = db.GetData2();
-            PaymentTypeBox.DataSource = _PaymentType;
-            PaymentTypeBox.ValueMember = "PaymentTypeID";
-            PaymentTypeBox.DisplayMember = "PaymentType";
-        }
-
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-
             if (msg.Msg == 256 && keyData == System.Windows.Forms.Keys.Enter)
             {
                 if (this.ActiveControl.ToString().Contains("Telerik.WinControls.UI.RadButton"))
@@ -49,6 +39,18 @@ namespace Darmangah_Sandogh
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void Paziresh_Load(object sender, EventArgs e)
+        {
+            regbox.Text = PersianDateTime.Now.ToString("yyyy/MM/dd");
+
+            db.SetCommand(@"Select * from PaymentType");
+            DataTable _PaymentType = db.GetData2();
+            PaymentTypeBox.DataSource = _PaymentType;
+            PaymentTypeBox.ValueMember = "PaymentTypeID";
+            PaymentTypeBox.DisplayMember = "PaymentType";
+
+        }
+
         private void radButton1_Click(object sender, EventArgs e)
         {
             if (fname.Text == "" || fname.Text == " " || fname.Text == string.Empty || lname.Text == "" ||
@@ -60,9 +62,8 @@ namespace Darmangah_Sandogh
             else
             {
                 if (GlobalVariables.shftID == 1 || GlobalVariables.shftID == 2 || GlobalVariables.shftID == 3 || GlobalVariables.shftID == 4)
-
                 {
-                    db.SetCommand(@"SELECT TOP 1 visNum FROM dbo.Patients INNER JOIN
+                    db.SetCommand(@"SELECT top 1 visNum FROM dbo.Patients INNER JOIN
                          dbo.khUsage ON dbo.Patients.patientid = dbo.khUsage.PatientID Where dbo.Patients.reg_date = '" +
                         PersianDateTime.Now.ToString("yyyy/MM/dd") + "' AND dbo.khUsage.ShiftID = '" + GlobalVariables.shftID +
                         "' Order By visNum DESC");
@@ -80,7 +81,7 @@ namespace Darmangah_Sandogh
 
                 if (GlobalVariables.shftID == 5 || GlobalVariables.shftID == 6)
                 {
-                    db.SetCommand(@"SELECT TOP 1 visNum FROM dbo.Patients INNER JOIN
+                    db.SetCommand(@"SELECT top 1 visNum FROM dbo.Patients INNER JOIN
                          dbo.khUsage ON dbo.Patients.patientid = dbo.khUsage.PatientID
 Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/dd") + "' AND '" + PersianDateTime.Now.AddDays(1).ToString("yyyy/MM/dd") + "' AND " +
                                   "dbo.khUsage.ShiftID = '" + GlobalVariables.shftID + "' Order By visNum DESC");
@@ -152,39 +153,41 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                     db.SetParameter(@"khID", "0");
                     db.SetParameter(@"SaOptionID", "1");
                     db.exec();
+
                 }
                 catch (Exception ex)
                 {
-                    RadMessageBox.Show(ex.Message);
                     RadMessageBox.Show("خطا در ثبت بیمار-کد1");
+                    RadMessageBox.Show(ex.Message);
+                    /////////////////////////////
                 }
-                /////////////////////////////
                 try
                 {
-                    db.SetCommand("Select * From khType where khID = 3");
+                    db.SetCommand("Select * From khType where khID = 1031");
                     ds = db.GetData();
+                    db.exec();
 
-                    var cnn2 = new SqlConnection(db.Cnn);
-                    cnn2.Open();
-                    SqlCommand cmd2 = cnn2.CreateCommand();
-                    cmd2.CommandType = CommandType.StoredProcedure;
-                    cmd2.CommandText = "KhAdd";
-                    cmd2.Parameters.AddWithValue(@"PatientID", PID);
-                    cmd2.Parameters.AddWithValue(@"ShiftID", GlobalVariables.shftID);
-                    cmd2.Parameters.AddWithValue(@"PersonelID", GlobalVariables.persID);
-                    cmd2.Parameters.AddWithValue(@"nurseID1", GlobalVariables.nurseID1);
-                    cmd2.Parameters.AddWithValue(@"nurseID2", GlobalVariables.nurseID2);
-                    cmd2.Parameters.AddWithValue(@"KhID", 3);
-                    cmd2.Parameters.AddWithValue(@"Num", 1);
-                    cmd2.Parameters.AddWithValue(@"depID", 1);
-                    cmd2.Parameters.AddWithValue(@"cost", ds.Tables[0].Rows[0]["khCost"].ToString());
-                    cmd2.Parameters.AddWithValue(@"gender", DBNull.Value);
-                    cmd2.Parameters.AddWithValue(@"IDPaymentType", PaymentTypeBox.SelectedValue);
-                    var returnParameter2 = cmd2.Parameters.Add("@khUID", SqlDbType.Int);
-                    returnParameter2.Direction = ParameterDirection.ReturnValue;
-                    cmd2.ExecuteNonQuery();
-                    khUID = returnParameter2.Value;
-                    cnn2.Close();
+                    var cnn3 = new SqlConnection(db.Cnn);
+                    cnn3.Open();
+                    SqlCommand cmd3 = cnn3.CreateCommand();
+                    cmd3.CommandType = CommandType.StoredProcedure;
+                    cmd3.CommandText = "KhAdd";
+                    cmd3.Parameters.AddWithValue(@"PatientID", PID);
+                    cmd3.Parameters.AddWithValue(@"ShiftID", GlobalVariables.shftID);
+                    cmd3.Parameters.AddWithValue(@"PersonelID", GlobalVariables.persID);
+                    cmd3.Parameters.AddWithValue(@"nurseID1", GlobalVariables.nurseID1);
+                    cmd3.Parameters.AddWithValue(@"nurseID2", GlobalVariables.nurseID2);
+                    cmd3.Parameters.AddWithValue(@"KhID", 2);
+                    cmd3.Parameters.AddWithValue(@"Num", 1);
+                    cmd3.Parameters.AddWithValue(@"depID", 1);
+                    cmd3.Parameters.AddWithValue(@"cost", ds.Tables[0].Rows[0]["khCost"].ToString());
+                    cmd3.Parameters.AddWithValue(@"gender", DBNull.Value);
+                    cmd3.Parameters.AddWithValue(@"IDPaymentType", PaymentTypeBox.SelectedValue);
+                    var returnParameter3 = cmd3.Parameters.Add("@khUID", SqlDbType.Int);
+                    returnParameter3.Direction = ParameterDirection.ReturnValue;
+                    cmd3.ExecuteNonQuery();
+                    khUID = returnParameter3.Value;
+                    cnn3.Close();
 
                     db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                     db.SetParameter(@"khUsageID", khUID);
@@ -195,21 +198,18 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
 
                     db.SetCommand("Insert into SysActKh (SaID,khID,SaOptionID) VALUES (@SaID,@khID,@SaOptionID)");
                     db.SetParameter(@"SaID", SaID);
-                    db.SetParameter(@"khID", "3");
+                    db.SetParameter(@"khID", "2");
                     db.SetParameter(@"SaOptionID", "3");
                     db.exec();
                 }
-                catch (Exception ex)
+                catch
                 {
-                    RadMessageBox.Show(ex.Message);
                     RadMessageBox.Show("خطا در ثبت بیمار-کد2");
                 }
 
-                db.SetCommand(
-                    @"SELECT fname + ' ' + lname as fullName, reg_date, recipt = N'بیمار', hourz, visNum as cntNumber FROM dbo.Patients where patientid = '" +
-                    PID + "'");
+                db.SetCommand(@"SELECT fname + ' ' + lname as fullName, reg_date, recipt = N'بیمار', hourz, visNum as cntNumber FROM dbo.Patients where patientid = '" +
+                        PID + "'");
                 DataTable info = db.GetData2();
-
 
                 try
                 {
@@ -219,6 +219,7 @@ FROM            dbo.Patients INNER JOIN
                          dbo.khType ON dbo.khUsage.KhID = dbo.khType.khID where dbo.khUsage.PatientID = '" +
                                   PID + "'");
                     DataTable KhUsage = db.GetData2();
+
                     if (checkBox1.Checked)
                     {
                         stiReport1.Load("Reports\\reciptFree.mrt");
@@ -261,30 +262,31 @@ FROM            dbo.Patients INNER JOIN
                             stiReport1.Show();
                         }
                     }
+
                 }
                 catch (Exception ex)
                 {
                     RadMessageBox.Show("1خطا در صدور فیش");
                     RadMessageBox.Show(ex.Message);
                 }
-                ///////////////////////
-                if (
-                    MessageBox.Show("آیا مایل به چاپ رسید پزشک می باشید؟", "چاپ رسید پزشک", MessageBoxButtons.OKCancel,
-                        MessageBoxIcon.None, MessageBoxDefaultButton.Button1) == DialogResult.OK)
+                ///////////////////
+                if (RadMessageBox.Show("آیا مایل به چاپ رسید پزشک می باشید؟", "چاپ رسید پزشک", MessageBoxButtons.OKCancel, RadMessageIcon.Info) == DialogResult.OK)
                 {
                     try
                     {
-                        db.SetCommand(
-                            @"SELECT fname + ' ' + lname as fullName, reg_date, recipt = N'پزشک', hourz, visNum as cntNumber FROM dbo.Patients where patientid = '" +
+                        db.SetCommand(@"SELECT fname + ' ' + lname as fullName, reg_date, recipt = N'پزشک', hourz, visNum as cntNumber FROM dbo.Patients where patientid = '" +
                             PID + "'");
                         DataTable info2 = db.GetData2();
+                        db.exec();
 
                         db.SetCommand(@"SELECT dbo.khType.khName, dbo.khUsage.Num, dbo.khUsage.cost
 FROM            dbo.Patients INNER JOIN
                          dbo.khUsage ON dbo.Patients.patientid = dbo.khUsage.PatientID INNER JOIN
                          dbo.khType ON dbo.khUsage.KhID = dbo.khType.khID where dbo.khUsage.PatientID = '" +
-                                      PID + "'");
+              PID + "'");
                         DataTable KhUsage2 = db.GetData2();
+                        db.exec();
+
                         if (checkBox1.Checked)
                         {
                             stiReport1.Load("Reports\\reciptFree.mrt");

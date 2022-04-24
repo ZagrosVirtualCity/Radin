@@ -169,5 +169,17 @@ namespace Darmangah_Sandogh
             var a = new visNiroo();
             a.Show();
         }
+
+        private void radButtonElement3_Click(object sender, EventArgs e)
+        {
+            var a = new visSepah();
+            a.Show();
+        }
+
+        private void radButtonElement4_Click(object sender, EventArgs e)
+        {
+            var a = new visMihan();
+            a.Show();
+        }
     }
 }

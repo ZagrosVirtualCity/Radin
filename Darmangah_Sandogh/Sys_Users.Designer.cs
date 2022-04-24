@@ -63,7 +63,7 @@
             this.groupBox2.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(914, 412);
+            this.groupBox2.Size = new System.Drawing.Size(914, 456);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ویرایش کاربران";
@@ -92,7 +92,7 @@
             this.groupBox3.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
             this.groupBox3.Location = new System.Drawing.Point(6, 124);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(898, 282);
+            this.groupBox3.Size = new System.Drawing.Size(898, 326);
             this.groupBox3.TabIndex = 83;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "سطح دسترسی کاربر";
@@ -111,10 +111,12 @@
             "گزارشات مالی",
             "مقادیر پایه",
             "مدیریت",
+            "دسترسی ویرایش",
+            "دسترسی حذف",
             "فعال/غیر فعال"});
             this.checkedListBox1.Location = new System.Drawing.Point(6, 104);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(886, 156);
+            this.checkedListBox1.Size = new System.Drawing.Size(886, 194);
             this.checkedListBox1.TabIndex = 79;
             // 
             // radCheckBox13
@@ -212,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 436);
+            this.ClientSize = new System.Drawing.Size(938, 480);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Name = "Sys_Users";

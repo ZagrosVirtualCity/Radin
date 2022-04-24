@@ -39,9 +39,8 @@ namespace Darmangah_Sandogh
         {
             try
             {
-                db.SetCommand("Insert into Doctors (doctorName,drPercent) VALUES (@doctorName,@drPercent)");
+                db.SetCommand("Insert into Doctors (doctorName) VALUES (@doctorName)");
                 db.SetParameter(@"doctorName", txtDrName.Text);
-                db.SetParameter(@"drPercent", txtDrPercent.Text);
                 db.exec();
                 RadMessageBox.Show("افزودن پزشک انجام شد");
                 txtDrName.Clear();
@@ -56,10 +55,9 @@ namespace Darmangah_Sandogh
 
         private void radButton2_Click(object sender, EventArgs e)
         {
-            db.SetCommand("Update doctors set doctorName = @doctorName, drPercent=@drPercent WHERE doctorID = @doctorID");
+            db.SetCommand("Update doctors set doctorName = @doctorName WHERE doctorID = @doctorID");
             db.SetParameter(@"doctorID", PID);
             db.SetParameter(@"doctorName", txtDrName.Text);
-            db.SetParameter(@"drPercent", txtDrPercent.Text);
 
             db.exec();
             FillGrid();
@@ -115,7 +113,6 @@ DialogResult.Yes)
             try
             {
                 txtDrName.Text = Convert.ToString(ds.Tables[0].Rows[0]["doctorName"]);
-                txtDrPercent.Text = Convert.ToString(ds.Tables[0].Rows[0]["drPercent"]);
             }
             catch
             {

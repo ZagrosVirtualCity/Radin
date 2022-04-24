@@ -3,13 +3,8 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
-using System.IO;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using Microsoft.Win32;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
@@ -143,22 +138,17 @@ namespace Darmangah_Sandogh
                     Err.SetError(pwd, "");
                     Err.SetError(uname, "");
 
-                    db.connect();
+                    //db.connect();
 
                     db.SetCommand("SELECT * FROM Sys_Users WHERE uname='" + uname.Text.Replace("'", "''") + "' AND pwd='" + CryptorEngine.Encrypt(pwd.Text.Replace("'", "''"), true) + "'");
                     ds = db.GetData();
                     if (ds.Tables[0].Rows.Count == 0)
                     {
-                        RadMessageBox.Show("نام کاربری یا رمز عبور صحیح نمی باشد");
+                        MessageBox.Show("نام کاربری یا رمز عبور صحیح نمی باشد");
+                        return;
                     }
                     else //If USer Or pass Correct
                     {
-
-                        db.SetCommand(@"Select drPercent from Doctors where doctorID = @doctorID");
-                        db.SetParameter(@"doctorID", drBox.SelectedValue);
-                        DataTable dt_DrPercenter = db.GetData2();
-                        GlobalVariables.drPercent = Convert.ToInt32(dt_DrPercenter.Rows[0]["drPercent"]);
-
                         bool active = Convert.ToBoolean(ds.Tables[0].Rows[0]["active"]);
                         if (active)
                         {
@@ -186,12 +176,14 @@ namespace Darmangah_Sandogh
                             GlobalVariables.nurseID2 = Convert.ToInt16(comboBox2.SelectedValue);
                             GlobalVariables.nurseName1 = comboBox1.Text;
                             GlobalVariables.nurseName2 = comboBox2.Text;
+                            GlobalVariables.EditAccess = Convert.ToBoolean(ds.Tables[0].Rows[0]["EditAccess"]);
+                            GlobalVariables.DelAccess = Convert.ToBoolean(ds.Tables[0].Rows[0]["DelAccess"]);
                             Hide();
                             sch.Show();
                         }
                         else
                         {
-                            RadMessageBox.Show("UserName or Password Is InCorrect");
+                           MessageBox.Show("نام کاربری شما غیر فعال می باشد");
                         }
 
                     }
@@ -199,8 +191,8 @@ namespace Darmangah_Sandogh
             }
             catch (Exception ex)
             {
-                RadMessageBox.Show("خطا در ورود ااطلاعات");
-                RadMessageBox.Show(ex.Message);
+                MessageBox.Show("خطا در ورود ااطلاعات");
+                LogDA.LogError(ex.Message);
             }
         }
 

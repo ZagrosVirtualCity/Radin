@@ -12,6 +12,7 @@
         internal static int nurseID2;
         internal static string nurseName1;
         internal static string nurseName2;
-        internal static int drPercent;
+        internal static bool DelAccess;
+        internal static bool EditAccess;
     }
 }

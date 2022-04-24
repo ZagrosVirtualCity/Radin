@@ -26,6 +26,12 @@ namespace Darmangah_Sandogh
         private void Paziresh_Load(object sender, EventArgs e)
         {
             regbox.Text = PersianDateTime.Now.ToString("yyyy/MM/dd");
+
+            db.SetCommand(@"Select * from PaymentType");
+            DataTable _PaymentType = db.GetData2();
+            PaymentTypeBox.DataSource = _PaymentType;
+            PaymentTypeBox.ValueMember = "PaymentTypeID";
+            PaymentTypeBox.DisplayMember = "PaymentType";
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -175,20 +181,17 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                     cmd2.Parameters.AddWithValue(@"depID", 1);
                     cmd2.Parameters.AddWithValue(@"cost", ds.Tables[0].Rows[0]["khCost"].ToString());
                     cmd2.Parameters.AddWithValue(@"gender", DBNull.Value);
+                    cmd2.Parameters.AddWithValue(@"IDPaymentType", PaymentTypeBox.SelectedValue);
                     var returnParameter2 = cmd2.Parameters.Add("@khUID", SqlDbType.Int);
                     returnParameter2.Direction = ParameterDirection.ReturnValue;
                     cmd2.ExecuteNonQuery();
                     khUID = returnParameter2.Value;
                     cnn2.Close();
 
-                    long _drCost = (Convert.ToInt32(ds.Tables[0].Rows[0]["khCost"]) * GlobalVariables.drPercent / 100);
-                    long _centerCost = (Convert.ToInt32(ds.Tables[0].Rows[0]["khCost"]) * (100 - GlobalVariables.drPercent) / 100);
-
-                    db.SetCommand(@"Insert into Salary (khUsageID,drCost,nurseCost,centerCost,gender)VALUES(@khUsageID,@drCost,@nurseCost,@centerCost,@gender)");
+                    db.SetCommand(@"Insert into Salary (khUsageID,nurseCost,centerCost,gender)VALUES(@khUsageID,@nurseCost,@centerCost,@gender)");
                     db.SetParameter(@"khUsageID", khUID);
-                    db.SetParameter(@"drCost", _drCost);
                     db.SetParameter(@"nurseCost", 0);
-                    db.SetParameter(@"centerCost", _centerCost);
+                    db.SetParameter(@"centerCost", Convert.ToInt32(ds.Tables[0].Rows[0]["khCost"]));
                     db.SetParameter(@"gender", DBNull.Value);
                     db.exec();
 
