@@ -119,8 +119,8 @@ WHERE dbo.patients.patientid = '" + Pid + "'");
                 drBox.ValueMember = "dr_drID";
                 string drID = _ds.Tables[0].Rows[0]["p_drID"].ToString();
                 pezeshk();
-            drBox.SelectedValue = drID;
-        }
+                drBox.SelectedValue = drID;
+            }
             catch
             {
             }

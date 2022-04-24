@@ -3,7 +3,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Windows.Forms;
-using System.Xml;
 using Stimulsoft.Report;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
@@ -21,7 +20,6 @@ namespace Darmangah_Sandogh
         private double nurseP;
         private double nurseCost;
         private double centerCost;
-        private int UserID;
         private string _reg_date;
 
         public Nosakh_Content()
@@ -134,7 +132,6 @@ WHERE dbo.patients.reg_date BETWEEN '" + PersianDateTime.Now.ToString("yyyy/MM/d
             PID = radGridView1.SelectedRows[0].Cells[1].Value.ToString();
             khid = radGridView1.SelectedRows[0].Cells[3].Value.ToString();
             khuid = radGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            UserID = Convert.ToInt16(radGridView1.SelectedRows[0].Cells[9].Value);
         }
 
         private void radButton1_Click(object sender, EventArgs e)
