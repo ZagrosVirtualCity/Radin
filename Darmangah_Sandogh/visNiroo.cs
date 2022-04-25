@@ -161,9 +161,16 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                 /////////////////////////////
                 try
                 {
-                    db.SetCommand("Select * From khType where khID = 3");
-                    ds = db.GetData();
-
+                    if (chkJanbaz.Checked)
+                    {
+                        db.SetCommand("Select * From khType where khID = 1032");
+                        ds = db.GetData();
+                    }
+                    else
+                    {
+                        db.SetCommand("Select * From khType where khID = 3");
+                        ds = db.GetData();
+                    }
                     var cnn2 = new SqlConnection(db.Cnn);
                     cnn2.Open();
                     SqlCommand cmd2 = cnn2.CreateCommand();

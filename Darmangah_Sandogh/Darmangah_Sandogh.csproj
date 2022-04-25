@@ -387,7 +387,6 @@
     <EmbeddedResource Include="InjectionInvoice.resx">
       <DependentUpon>InjectionInvoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="ShiftReport.resx">
       <DependentUpon>ShiftReport.cs</DependentUpon>
     </EmbeddedResource>

@@ -40,6 +40,8 @@
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.PaymentTypeBox = new Telerik.WinControls.UI.RadDropDownList();
+            this.chkJanbaz = new System.Windows.Forms.CheckBox();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fname)).BeginInit();
@@ -49,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaymentTypeBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,10 +59,10 @@
             // 
             this.radButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radButton1.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radButton1.Location = new System.Drawing.Point(91, 160);
+            this.radButton1.Location = new System.Drawing.Point(91, 186);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(120, 36);
-            this.radButton1.TabIndex = 7;
+            this.radButton1.TabIndex = 6;
             this.radButton1.Text = "ثبت";
             this.radButton1.ThemeName = "Material";
             this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
@@ -128,7 +131,7 @@
             this.regbox.Location = new System.Drawing.Point(44, 76);
             this.regbox.Name = "regbox";
             this.regbox.Size = new System.Drawing.Size(167, 24);
-            this.regbox.TabIndex = 5;
+            this.regbox.TabIndex = 2;
             this.regbox.Text = "13__/__/__";
             this.regbox.TypeAllChar = false;
             this.regbox.TypeDateShamsi = true;
@@ -141,10 +144,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.checkBox1.Location = new System.Drawing.Point(153, 134);
+            this.checkBox1.Location = new System.Drawing.Point(153, 160);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(58, 20);
-            this.checkBox1.TabIndex = 13;
+            this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "رایگان";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -152,7 +155,7 @@
             // 
             this.radLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel7.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radLabel7.Location = new System.Drawing.Point(281, 132);
+            this.radLabel7.Location = new System.Drawing.Point(281, 158);
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.Size = new System.Drawing.Size(47, 20);
             this.radLabel7.TabIndex = 14;
@@ -177,14 +180,38 @@
             this.PaymentTypeBox.Location = new System.Drawing.Point(44, 106);
             this.PaymentTypeBox.Name = "PaymentTypeBox";
             this.PaymentTypeBox.Size = new System.Drawing.Size(167, 22);
-            this.PaymentTypeBox.TabIndex = 16;
+            this.PaymentTypeBox.TabIndex = 3;
             this.PaymentTypeBox.Text = "radDropDownList1";
+            // 
+            // chkJanbaz
+            // 
+            this.chkJanbaz.AutoSize = true;
+            this.chkJanbaz.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.chkJanbaz.Location = new System.Drawing.Point(145, 134);
+            this.chkJanbaz.Name = "chkJanbaz";
+            this.chkJanbaz.Size = new System.Drawing.Size(66, 20);
+            this.chkJanbaz.TabIndex = 4;
+            this.chkJanbaz.Text = "جانبازی";
+            this.chkJanbaz.UseVisualStyleBackColor = true;
+            // 
+            // radLabel4
+            // 
+            this.radLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel4.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.radLabel4.Location = new System.Drawing.Point(281, 132);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(44, 20);
+            this.radLabel4.TabIndex = 18;
+            this.radLabel4.Text = "جانباز :";
+            this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // visNiroo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 211);
+            this.ClientSize = new System.Drawing.Size(340, 233);
+            this.Controls.Add(this.chkJanbaz);
+            this.Controls.Add(this.radLabel4);
             this.Controls.Add(this.radLabel3);
             this.Controls.Add(this.PaymentTypeBox);
             this.Controls.Add(this.checkBox1);
@@ -215,6 +242,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PaymentTypeBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -235,5 +263,7 @@
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadDropDownList PaymentTypeBox;
+        private System.Windows.Forms.CheckBox chkJanbaz;
+        private Telerik.WinControls.UI.RadLabel radLabel4;
     }
 }
