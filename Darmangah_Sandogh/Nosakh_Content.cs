@@ -161,7 +161,7 @@ WHERE dbo.patients.reg_date BETWEEN '" + PersianDateTime.Now.ToString("yyyy/MM/d
                 nurseCost = (nurseP * Convert.ToInt32(_khCost.Rows[0]["khCost"])) / 100;
                 centerCost = ((100 - nurseP) * Convert.ToInt32(_khCost.Rows[0]["khCost"])) / 100;
 
-                var cnn2 = new SqlConnection(db.Cnn);
+                var cnn2 = new SqlConnection(db.CreateConnectionString());
                 cnn2.Open();
                 SqlCommand cmd2 = cnn2.CreateCommand();
                 cmd2.CommandType = CommandType.StoredProcedure;

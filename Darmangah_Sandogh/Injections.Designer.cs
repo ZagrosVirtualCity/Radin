@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn4 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn5 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn6 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn7 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn8 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
             Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn9 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
@@ -41,69 +48,62 @@
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.lname = new Telerik.WinControls.UI.RadTextBox();
             this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
-            this.radCheckBox1 = new Telerik.WinControls.UI.RadCheckBox();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
+            this.btnAddPatient = new Telerik.WinControls.UI.RadButton();
+            this.radLabel10 = new Telerik.WinControls.UI.RadLabel();
+            this.PaymentTypeBox = new Telerik.WinControls.UI.RadDropDownList();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.gender = new Telerik.WinControls.UI.RadToggleSwitch();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.radLabel7 = new Telerik.WinControls.UI.RadLabel();
             this.regBox = new TextBoxtest.TxtProNet();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
-            this.radTextBox6 = new Telerik.WinControls.UI.RadTextBox();
-            this.radCheckBox8 = new Telerik.WinControls.UI.RadCheckBox();
-            this.radCheckBox6 = new Telerik.WinControls.UI.RadCheckBox();
-            this.radTextBox5 = new Telerik.WinControls.UI.RadTextBox();
-            this.radCheckBox5 = new Telerik.WinControls.UI.RadCheckBox();
-            this.radTextBox4 = new Telerik.WinControls.UI.RadTextBox();
-            this.radTextBox3 = new Telerik.WinControls.UI.RadTextBox();
-            this.radTextBox2 = new Telerik.WinControls.UI.RadTextBox();
-            this.radTextBox1 = new Telerik.WinControls.UI.RadTextBox();
-            this.radCheckBox4 = new Telerik.WinControls.UI.RadCheckBox();
-            this.radCheckBox3 = new Telerik.WinControls.UI.RadCheckBox();
-            this.radCheckBox2 = new Telerik.WinControls.UI.RadCheckBox();
+            this.btnPrint = new Telerik.WinControls.UI.RadButton();
+            this.radGridView2 = new Telerik.WinControls.UI.RadGridView();
+            this.radLabel6 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
+            this.KhedmatTypeBox = new Telerik.WinControls.UI.RadDropDownList();
             this.radGroupBox3 = new Telerik.WinControls.UI.RadGroupBox();
             this.radLabel9 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel8 = new Telerik.WinControls.UI.RadLabel();
-            this.radTextBox8 = new Telerik.WinControls.UI.RadTextBox();
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.radGridView1 = new Telerik.WinControls.UI.RadGridView();
             this.materialTheme1 = new Telerik.WinControls.Themes.MaterialTheme();
             this.radThemeManager1 = new Telerik.WinControls.RadThemeManager();
+            this.txtKhCount = new DevExpress.XtraEditors.SpinEdit();
+            this.txtDrugCount = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
             this.radGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddPatient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentTypeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
             this.radGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhedmatTypeBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).BeginInit();
             this.radGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKhCount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDrugCount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,11 +111,11 @@
             // 
             this.radButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radButton1.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radButton1.Location = new System.Drawing.Point(92, 531);
+            this.radButton1.Location = new System.Drawing.Point(360, 108);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(110, 24);
             this.radButton1.TabIndex = 38;
-            this.radButton1.Text = "ثبت";
+            this.radButton1.Text = "افزودن";
             this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
             // radLabel1
@@ -169,19 +169,12 @@
             this.radLabel5.Text = "تاریخ ثبت :";
             this.radLabel5.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
-            // radCheckBox1
-            // 
-            this.radCheckBox1.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radCheckBox1.Location = new System.Drawing.Point(218, 21);
-            this.radCheckBox1.Name = "radCheckBox1";
-            this.radCheckBox1.Size = new System.Drawing.Size(88, 20);
-            this.radCheckBox1.TabIndex = 7;
-            this.radCheckBox1.Text = "تزریق وریدی";
-            this.radCheckBox1.CheckStateChanged += new System.EventHandler(this.radCheckBox1_CheckStateChanged);
-            // 
             // radGroupBox1
             // 
             this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.btnAddPatient);
+            this.radGroupBox1.Controls.Add(this.radLabel10);
+            this.radGroupBox1.Controls.Add(this.PaymentTypeBox);
             this.radGroupBox1.Controls.Add(this.radLabel3);
             this.radGroupBox1.Controls.Add(this.gender);
             this.radGroupBox1.Controls.Add(this.checkBox1);
@@ -194,11 +187,44 @@
             this.radGroupBox1.Controls.Add(this.radLabel5);
             this.radGroupBox1.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radGroupBox1.HeaderText = "مشخصات";
-            this.radGroupBox1.Location = new System.Drawing.Point(330, 12);
+            this.radGroupBox1.Location = new System.Drawing.Point(407, 12);
             this.radGroupBox1.Name = "radGroupBox1";
-            this.radGroupBox1.Size = new System.Drawing.Size(533, 126);
+            this.radGroupBox1.Size = new System.Drawing.Size(533, 190);
             this.radGroupBox1.TabIndex = 11;
             this.radGroupBox1.Text = "مشخصات";
+            // 
+            // btnAddPatient
+            // 
+            this.btnAddPatient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddPatient.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.btnAddPatient.Location = new System.Drawing.Point(325, 155);
+            this.btnAddPatient.Name = "btnAddPatient";
+            this.btnAddPatient.Size = new System.Drawing.Size(110, 24);
+            this.btnAddPatient.TabIndex = 39;
+            this.btnAddPatient.Text = "ثبت";
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
+            // 
+            // radLabel10
+            // 
+            this.radLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel10.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.radLabel10.Location = new System.Drawing.Point(441, 101);
+            this.radLabel10.Name = "radLabel10";
+            this.radLabel10.Size = new System.Drawing.Size(87, 20);
+            this.radLabel10.TabIndex = 16;
+            this.radLabel10.Text = "نحوه پرداخت :";
+            this.radLabel10.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PaymentTypeBox
+            // 
+            this.PaymentTypeBox.DropDownAnimationEnabled = true;
+            this.PaymentTypeBox.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.PaymentTypeBox.Location = new System.Drawing.Point(272, 101);
+            this.PaymentTypeBox.Name = "PaymentTypeBox";
+            this.PaymentTypeBox.Size = new System.Drawing.Size(163, 22);
+            this.PaymentTypeBox.TabIndex = 17;
+            this.PaymentTypeBox.Text = "radDropDownList1";
+            this.PaymentTypeBox.VisualListItemFormatting += new Telerik.WinControls.UI.VisualListItemFormattingEventHandler(this.KhedmatTypeBox_VisualListItemFormatting);
             // 
             // radLabel3
             // 
@@ -223,9 +249,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(380, 100);
+            this.checkBox1.Location = new System.Drawing.Point(377, 129);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(59, 20);
+            this.checkBox1.Size = new System.Drawing.Size(58, 20);
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "رایگان";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -234,7 +260,7 @@
             // 
             this.radLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel7.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radLabel7.Location = new System.Drawing.Point(481, 98);
+            this.radLabel7.Location = new System.Drawing.Point(478, 127);
             this.radLabel7.Name = "radLabel7";
             this.radLabel7.Size = new System.Drawing.Size(47, 20);
             this.radLabel7.TabIndex = 13;
@@ -267,155 +293,139 @@
             // radGroupBox2
             // 
             this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.txtKhCount);
+            this.radGroupBox2.Controls.Add(this.btnPrint);
+            this.radGroupBox2.Controls.Add(this.radGridView2);
+            this.radGroupBox2.Controls.Add(this.radLabel6);
+            this.radGroupBox2.Controls.Add(this.radLabel4);
             this.radGroupBox2.Controls.Add(this.radButton1);
-            this.radGroupBox2.Controls.Add(this.radTextBox6);
-            this.radGroupBox2.Controls.Add(this.radCheckBox8);
-            this.radGroupBox2.Controls.Add(this.radCheckBox6);
-            this.radGroupBox2.Controls.Add(this.radTextBox5);
-            this.radGroupBox2.Controls.Add(this.radCheckBox5);
-            this.radGroupBox2.Controls.Add(this.radTextBox4);
-            this.radGroupBox2.Controls.Add(this.radTextBox3);
-            this.radGroupBox2.Controls.Add(this.radTextBox2);
-            this.radGroupBox2.Controls.Add(this.radTextBox1);
-            this.radGroupBox2.Controls.Add(this.radCheckBox4);
-            this.radGroupBox2.Controls.Add(this.radCheckBox3);
-            this.radGroupBox2.Controls.Add(this.radCheckBox2);
-            this.radGroupBox2.Controls.Add(this.radCheckBox1);
+            this.radGroupBox2.Controls.Add(this.KhedmatTypeBox);
             this.radGroupBox2.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radGroupBox2.HeaderText = "خدمت ها";
-            this.radGroupBox2.Location = new System.Drawing.Point(12, 12);
+            this.radGroupBox2.Location = new System.Drawing.Point(407, 208);
             this.radGroupBox2.Name = "radGroupBox2";
-            this.radGroupBox2.Size = new System.Drawing.Size(312, 576);
+            this.radGroupBox2.Size = new System.Drawing.Size(533, 470);
             this.radGroupBox2.TabIndex = 18;
             this.radGroupBox2.Text = "خدمت ها";
             // 
-            // radTextBox6
+            // btnPrint
             // 
-            this.radTextBox6.Enabled = false;
-            this.radTextBox6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radTextBox6.Location = new System.Drawing.Point(9, 146);
-            this.radTextBox6.Name = "radTextBox6";
-            this.radTextBox6.Size = new System.Drawing.Size(167, 19);
-            this.radTextBox6.TabIndex = 18;
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.btnPrint.Location = new System.Drawing.Point(244, 108);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(110, 24);
+            this.btnPrint.TabIndex = 42;
+            this.btnPrint.Text = "چاپ فاکتور";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // radCheckBox8
+            // radGridView2
             // 
-            this.radCheckBox8.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radCheckBox8.Location = new System.Drawing.Point(232, 172);
-            this.radCheckBox8.Name = "radCheckBox8";
-            this.radCheckBox8.Size = new System.Drawing.Size(74, 20);
-            this.radCheckBox8.TabIndex = 21;
-            this.radCheckBox8.Text = "فصد خون";
+            this.radGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radGridView2.BackColor = System.Drawing.SystemColors.Control;
+            this.radGridView2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.radGridView2.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.radGridView2.ForeColor = System.Drawing.Color.Black;
+            this.radGridView2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.radGridView2.Location = new System.Drawing.Point(5, 139);
             // 
-            // radCheckBox6
             // 
-            this.radCheckBox6.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radCheckBox6.Location = new System.Drawing.Point(182, 146);
-            this.radCheckBox6.Name = "radCheckBox6";
-            this.radCheckBox6.Size = new System.Drawing.Size(124, 20);
-            this.radCheckBox6.TabIndex = 17;
-            this.radCheckBox6.Text = "تزریق دارو بدنسازی";
-            this.radCheckBox6.CheckStateChanged += new System.EventHandler(this.radCheckBox6_CheckStateChanged);
             // 
-            // radTextBox5
+            this.radGridView2.MasterTemplate.AllowAddNewRow = false;
+            this.radGridView2.MasterTemplate.AllowDragToGroup = false;
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "KhUsageID";
+            gridViewTextBoxColumn1.HeaderText = "ردیف";
+            gridViewTextBoxColumn1.IsVisible = false;
+            gridViewTextBoxColumn1.Name = "KhUsageID";
+            gridViewTextBoxColumn1.Width = 37;
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "RowNo";
+            gridViewTextBoxColumn2.HeaderText = "ردیف";
+            gridViewTextBoxColumn2.Name = "RowNo";
+            gridViewTextBoxColumn2.Width = 37;
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "FullName";
+            gridViewTextBoxColumn3.HeaderText = "نام و نام خانوادگی";
+            gridViewTextBoxColumn3.Name = "FullName";
+            gridViewTextBoxColumn3.Width = 106;
+            gridViewTextBoxColumn4.EnableExpressionEditor = false;
+            gridViewTextBoxColumn4.FieldName = "reg_date";
+            gridViewTextBoxColumn4.HeaderText = "تاریخ ثبت";
+            gridViewTextBoxColumn4.Name = "reg_date";
+            gridViewTextBoxColumn4.Width = 64;
+            gridViewTextBoxColumn5.EnableExpressionEditor = false;
+            gridViewTextBoxColumn5.FieldName = "khName";
+            gridViewTextBoxColumn5.HeaderText = "خدمت";
+            gridViewTextBoxColumn5.Name = "khName";
+            gridViewTextBoxColumn5.Width = 46;
+            gridViewTextBoxColumn6.EnableExpressionEditor = false;
+            gridViewTextBoxColumn6.FieldName = "Num";
+            gridViewTextBoxColumn6.HeaderText = "تعداد";
+            gridViewTextBoxColumn6.Name = "Num";
+            gridViewTextBoxColumn6.Width = 37;
+            this.radGridView2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewTextBoxColumn4,
+            gridViewTextBoxColumn5,
+            gridViewTextBoxColumn6});
+            this.radGridView2.MasterTemplate.ViewDefinition = tableViewDefinition1;
+            this.radGridView2.Name = "radGridView2";
+            this.radGridView2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radGridView2.Size = new System.Drawing.Size(523, 326);
+            this.radGridView2.TabIndex = 41;
             // 
-            this.radTextBox5.Enabled = false;
-            this.radTextBox5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radTextBox5.Location = new System.Drawing.Point(9, 121);
-            this.radTextBox5.Name = "radTextBox5";
-            this.radTextBox5.Size = new System.Drawing.Size(167, 19);
-            this.radTextBox5.TabIndex = 16;
+            // radLabel6
             // 
-            // radCheckBox5
+            this.radLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel6.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.radLabel6.Location = new System.Drawing.Point(485, 68);
+            this.radLabel6.Name = "radLabel6";
+            this.radLabel6.Size = new System.Drawing.Size(43, 20);
+            this.radLabel6.TabIndex = 40;
+            this.radLabel6.Text = "تعداد :";
+            this.radLabel6.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
-            this.radCheckBox5.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radCheckBox5.Location = new System.Drawing.Point(203, 121);
-            this.radCheckBox5.Name = "radCheckBox5";
-            this.radCheckBox5.Size = new System.Drawing.Size(103, 20);
-            this.radCheckBox5.TabIndex = 15;
-            this.radCheckBox5.Text = "تزریق زیر جلدی";
-            this.radCheckBox5.CheckStateChanged += new System.EventHandler(this.radCheckBox5_CheckStateChanged);
+            // radLabel4
             // 
-            // radTextBox4
+            this.radLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel4.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.radLabel4.Location = new System.Drawing.Point(476, 42);
+            this.radLabel4.Name = "radLabel4";
+            this.radLabel4.Size = new System.Drawing.Size(52, 20);
+            this.radLabel4.TabIndex = 39;
+            this.radLabel4.Text = "خدمت :";
+            this.radLabel4.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
-            this.radTextBox4.Enabled = false;
-            this.radTextBox4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radTextBox4.Location = new System.Drawing.Point(9, 96);
-            this.radTextBox4.Name = "radTextBox4";
-            this.radTextBox4.Size = new System.Drawing.Size(167, 19);
-            this.radTextBox4.TabIndex = 14;
+            // KhedmatTypeBox
             // 
-            // radTextBox3
-            // 
-            this.radTextBox3.Enabled = false;
-            this.radTextBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radTextBox3.Location = new System.Drawing.Point(9, 71);
-            this.radTextBox3.Name = "radTextBox3";
-            this.radTextBox3.Size = new System.Drawing.Size(167, 19);
-            this.radTextBox3.TabIndex = 12;
-            // 
-            // radTextBox2
-            // 
-            this.radTextBox2.Enabled = false;
-            this.radTextBox2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radTextBox2.Location = new System.Drawing.Point(9, 46);
-            this.radTextBox2.Name = "radTextBox2";
-            this.radTextBox2.Size = new System.Drawing.Size(167, 19);
-            this.radTextBox2.TabIndex = 10;
-            // 
-            // radTextBox1
-            // 
-            this.radTextBox1.Enabled = false;
-            this.radTextBox1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radTextBox1.Location = new System.Drawing.Point(9, 21);
-            this.radTextBox1.Name = "radTextBox1";
-            this.radTextBox1.Size = new System.Drawing.Size(167, 19);
-            this.radTextBox1.TabIndex = 8;
-            // 
-            // radCheckBox4
-            // 
-            this.radCheckBox4.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radCheckBox4.Location = new System.Drawing.Point(264, 96);
-            this.radCheckBox4.Name = "radCheckBox4";
-            this.radCheckBox4.Size = new System.Drawing.Size(42, 20);
-            this.radCheckBox4.TabIndex = 13;
-            this.radCheckBox4.Text = "سرم";
-            this.radCheckBox4.CheckStateChanged += new System.EventHandler(this.radCheckBox4_CheckStateChanged);
-            // 
-            // radCheckBox3
-            // 
-            this.radCheckBox3.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radCheckBox3.Location = new System.Drawing.Point(199, 71);
-            this.radCheckBox3.Name = "radCheckBox3";
-            this.radCheckBox3.Size = new System.Drawing.Size(107, 20);
-            this.radCheckBox3.TabIndex = 11;
-            this.radCheckBox3.Text = "تزریق داخل سرم";
-            this.radCheckBox3.CheckStateChanged += new System.EventHandler(this.radCheckBox3_CheckStateChanged);
-            // 
-            // radCheckBox2
-            // 
-            this.radCheckBox2.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radCheckBox2.Location = new System.Drawing.Point(212, 46);
-            this.radCheckBox2.Name = "radCheckBox2";
-            this.radCheckBox2.Size = new System.Drawing.Size(94, 20);
-            this.radCheckBox2.TabIndex = 9;
-            this.radCheckBox2.Text = "تزریق عضلانی";
-            this.radCheckBox2.CheckStateChanged += new System.EventHandler(this.radCheckBox2_CheckStateChanged);
+            this.KhedmatTypeBox.DropDownAnimationEnabled = true;
+            this.KhedmatTypeBox.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.KhedmatTypeBox.Location = new System.Drawing.Point(303, 40);
+            this.KhedmatTypeBox.Name = "KhedmatTypeBox";
+            this.KhedmatTypeBox.Size = new System.Drawing.Size(167, 22);
+            this.KhedmatTypeBox.TabIndex = 4;
+            this.KhedmatTypeBox.Text = "radDropDownList1";
+            this.KhedmatTypeBox.VisualListItemFormatting += new Telerik.WinControls.UI.VisualListItemFormattingEventHandler(this.KhedmatTypeBox_VisualListItemFormatting);
             // 
             // radGroupBox3
             // 
             this.radGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox3.Controls.Add(this.txtDrugCount);
             this.radGroupBox3.Controls.Add(this.radLabel9);
             this.radGroupBox3.Controls.Add(this.radLabel8);
-            this.radGroupBox3.Controls.Add(this.radTextBox8);
             this.radGroupBox3.Controls.Add(this.radButton2);
             this.radGroupBox3.Controls.Add(this.comboBox1);
             this.radGroupBox3.Controls.Add(this.radGridView1);
             this.radGroupBox3.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radGroupBox3.HeaderText = "دارو";
-            this.radGroupBox3.Location = new System.Drawing.Point(330, 144);
+            this.radGroupBox3.Location = new System.Drawing.Point(12, 12);
             this.radGroupBox3.Name = "radGroupBox3";
-            this.radGroupBox3.Size = new System.Drawing.Size(533, 444);
+            this.radGroupBox3.Size = new System.Drawing.Size(389, 666);
             this.radGroupBox3.TabIndex = 19;
             this.radGroupBox3.Text = "دارو";
             // 
@@ -423,7 +433,7 @@
             // 
             this.radLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel9.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radLabel9.Location = new System.Drawing.Point(485, 309);
+            this.radLabel9.Location = new System.Drawing.Point(341, 309);
             this.radLabel9.Name = "radLabel9";
             this.radLabel9.Size = new System.Drawing.Size(43, 20);
             this.radLabel9.TabIndex = 1;
@@ -434,27 +444,18 @@
             // 
             this.radLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radLabel8.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radLabel8.Location = new System.Drawing.Point(483, 283);
+            this.radLabel8.Location = new System.Drawing.Point(339, 283);
             this.radLabel8.Name = "radLabel8";
             this.radLabel8.Size = new System.Drawing.Size(45, 20);
             this.radLabel8.TabIndex = 14;
             this.radLabel8.Text = "آمپول :";
             this.radLabel8.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
-            // radTextBox8
-            // 
-            this.radTextBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radTextBox8.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radTextBox8.Location = new System.Drawing.Point(272, 310);
-            this.radTextBox8.Name = "radTextBox8";
-            this.radTextBox8.Size = new System.Drawing.Size(167, 22);
-            this.radTextBox8.TabIndex = 40;
-            // 
             // radButton2
             // 
             this.radButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.radButton2.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
-            this.radButton2.Location = new System.Drawing.Point(329, 335);
+            this.radButton2.Location = new System.Drawing.Point(185, 341);
             this.radButton2.Name = "radButton2";
             this.radButton2.Size = new System.Drawing.Size(110, 24);
             this.radButton2.TabIndex = 41;
@@ -468,7 +469,7 @@
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(272, 283);
+            this.comboBox1.Location = new System.Drawing.Point(128, 283);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(167, 24);
             this.comboBox1.TabIndex = 39;
@@ -527,16 +528,50 @@
             this.radGridView1.MasterTemplate.ViewDefinition = tableViewDefinition2;
             this.radGridView1.Name = "radGridView1";
             this.radGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radGridView1.Size = new System.Drawing.Size(529, 259);
+            this.radGridView1.Size = new System.Drawing.Size(385, 259);
             this.radGridView1.TabIndex = 0;
             this.radGridView1.UserDeletingRow += new Telerik.WinControls.UI.GridViewRowCancelEventHandler(this.radGridView1_UserDeletingRow);
             this.radGridView1.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridView1_CellClick);
+            // 
+            // txtKhCount
+            // 
+            this.txtKhCount.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtKhCount.Location = new System.Drawing.Point(407, 68);
+            this.txtKhCount.Name = "txtKhCount";
+            this.txtKhCount.Properties.Appearance.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.txtKhCount.Properties.Appearance.Options.UseFont = true;
+            this.txtKhCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtKhCount.Properties.MaskSettings.Set("mask", "d");
+            this.txtKhCount.Size = new System.Drawing.Size(63, 22);
+            this.txtKhCount.TabIndex = 42;
+            // 
+            // txtDrugCount
+            // 
+            this.txtDrugCount.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtDrugCount.Location = new System.Drawing.Point(232, 313);
+            this.txtDrugCount.Name = "txtDrugCount";
+            this.txtDrugCount.Properties.Appearance.Font = new System.Drawing.Font("IRANSansMobile", 9.749999F, System.Drawing.FontStyle.Bold);
+            this.txtDrugCount.Properties.Appearance.Options.UseFont = true;
+            this.txtDrugCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDrugCount.Properties.MaskSettings.Set("mask", "d");
+            this.txtDrugCount.Size = new System.Drawing.Size(63, 22);
+            this.txtDrugCount.TabIndex = 43;
             // 
             // Injections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 602);
+            this.ClientSize = new System.Drawing.Size(952, 690);
             this.Controls.Add(this.radGroupBox3);
             this.Controls.Add(this.radGroupBox2);
             this.Controls.Add(this.radGroupBox1);
@@ -556,37 +591,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
             this.radGroupBox1.ResumeLayout(false);
             this.radGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddPatient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PaymentTypeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
             this.radGroupBox2.ResumeLayout(false);
             this.radGroupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radCheckBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPrint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KhedmatTypeBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGroupBox3)).EndInit();
             this.radGroupBox3.ResumeLayout(false);
             this.radGroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKhCount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDrugCount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -600,28 +632,14 @@
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadTextBox lname;
         private Telerik.WinControls.UI.RadLabel radLabel5;
-        private Telerik.WinControls.UI.RadCheckBox radCheckBox1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
-        private Telerik.WinControls.UI.RadCheckBox radCheckBox4;
-        private Telerik.WinControls.UI.RadCheckBox radCheckBox3;
-        private Telerik.WinControls.UI.RadCheckBox radCheckBox2;
-        private Telerik.WinControls.UI.RadTextBox radTextBox4;
-        private Telerik.WinControls.UI.RadTextBox radTextBox3;
-        private Telerik.WinControls.UI.RadTextBox radTextBox2;
-        private Telerik.WinControls.UI.RadTextBox radTextBox1;
-        private Telerik.WinControls.UI.RadTextBox radTextBox6;
-        private Telerik.WinControls.UI.RadCheckBox radCheckBox6;
-        private Telerik.WinControls.UI.RadTextBox radTextBox5;
-        private Telerik.WinControls.UI.RadCheckBox radCheckBox5;
         private TextBoxtest.TxtProNet regBox;
-        private Telerik.WinControls.UI.RadCheckBox radCheckBox8;
         private System.Windows.Forms.CheckBox checkBox1;
         private Telerik.WinControls.UI.RadLabel radLabel7;
         private Telerik.WinControls.UI.RadGroupBox radGroupBox3;
         private Telerik.WinControls.UI.RadLabel radLabel9;
         private Telerik.WinControls.UI.RadLabel radLabel8;
-        private Telerik.WinControls.UI.RadTextBox radTextBox8;
         private Telerik.WinControls.UI.RadButton radButton2;
         private System.Windows.Forms.ComboBox comboBox1;
         private Telerik.WinControls.UI.RadGridView radGridView1;
@@ -629,5 +647,15 @@
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.Themes.MaterialTheme materialTheme1;
         private Telerik.WinControls.RadThemeManager radThemeManager1;
+        private Telerik.WinControls.UI.RadGridView radGridView2;
+        private Telerik.WinControls.UI.RadLabel radLabel6;
+        private Telerik.WinControls.UI.RadLabel radLabel4;
+        private Telerik.WinControls.UI.RadDropDownList KhedmatTypeBox;
+        private Telerik.WinControls.UI.RadButton btnPrint;
+        private Telerik.WinControls.UI.RadLabel radLabel10;
+        private Telerik.WinControls.UI.RadDropDownList PaymentTypeBox;
+        private Telerik.WinControls.UI.RadButton btnAddPatient;
+        private DevExpress.XtraEditors.SpinEdit txtKhCount;
+        private DevExpress.XtraEditors.SpinEdit txtDrugCount;
     }
 }

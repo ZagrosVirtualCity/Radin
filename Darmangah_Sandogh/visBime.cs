@@ -98,7 +98,7 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                 }
                 try
                 {
-                    var cnn = new SqlConnection(db.Cnn);
+                    var cnn = new SqlConnection(db.CreateConnectionString());
                     cnn.Open();
                     SqlCommand cmd = cnn.CreateCommand();
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -132,7 +132,7 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                     db.SetParameter(@"PatientID", PID);
                     ds = db.GetData();
 
-                    var cnn2 = new SqlConnection(db.Cnn);
+                    var cnn2 = new SqlConnection(db.CreateConnectionString());
                     cnn2.Open();
                     SqlCommand cmd2 = cnn2.CreateCommand();
                     cmd2.CommandType = CommandType.StoredProcedure;
@@ -166,7 +166,7 @@ Where dbo.Patients.reg_date Between '" + PersianDateTime.Now.ToString("yyyy/MM/d
                     db.SetCommand("Select * From khType where khID = 1");
                     ds = db.GetData();
 
-                    var cnn2 = new SqlConnection(db.Cnn);
+                    var cnn2 = new SqlConnection(db.CreateConnectionString());
                     cnn2.Open();
                     SqlCommand cmd2 = cnn2.CreateCommand();
                     cmd2.CommandType = CommandType.StoredProcedure;

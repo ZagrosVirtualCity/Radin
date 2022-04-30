@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
-using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
 namespace Darmangah_Sandogh
@@ -43,16 +41,16 @@ namespace Darmangah_Sandogh
             backgroundWorker2.RunWorkerAsync();
             Thread.CurrentThread.CurrentCulture = new CultureInfo("EN-US");
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
-            try
-            {
-                db.connect();
-            }
-            catch
-            {
-                toolStripStatusLabel2.Text = "اتصال برقرار نیست";
-                toolStripStatusLabel2.ForeColor = Color.Red;
-                db.disconnect();
-            }
+            //try
+            //{
+            //    db.connect();
+            //}
+            //catch
+            //{
+            //    toolStripStatusLabel2.Text = "اتصال برقرار نیست";
+            //    toolStripStatusLabel2.ForeColor = Color.Red;
+            //    db.disconnect();
+            //}
 
             uname.Focus();
             var language = new CultureInfo("EN-US");
@@ -183,7 +181,7 @@ namespace Darmangah_Sandogh
                         }
                         else
                         {
-                           MessageBox.Show("نام کاربری شما غیر فعال می باشد");
+                            MessageBox.Show("نام کاربری شما غیر فعال می باشد");
                         }
 
                     }
